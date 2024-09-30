@@ -1559,7 +1559,7 @@ int main(int argc, char* argv[])
         }
         walls[i]->setMaterial(matGround);
 
-
+/*
         if(i==5){
             walls[i]->m_texture = cTexture2d::create();
             walls[i]->setUseTexture(true);
@@ -1568,7 +1568,7 @@ int main(int argc, char* argv[])
             //walls[i]->rotateAboutLocalAxisDeg(1,0,0,90);
 
         }
-
+*/
 
         walls[i]->m_bulletRigidBody->setFriction(0.9);
 
