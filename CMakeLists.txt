@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 if(WIN32)
     set(CHAI3D_DIR "c:/chai3d")
 elseif(UNIX)
-    set(CHAI3D_DIR "../chai3d")
+    set(CHAI3D_DIR "/home/stork-drives/Documents/haptikenhet/sourcecode/chai3d")
 endif()
 
 # Include directories for CHAI3D and Bullet
@@ -50,19 +50,19 @@ elseif(UNIX)
     target_compile_options(duohaptics PRIVATE -std=c++0x)
 
     target_link_libraries(duohaptics
-        ${CHAI3D_DIR}/lib/libchai3d.a
+        ${CHAI3D_DIR}/libchai3d.a
+        ${CHAI3D_DIR}/external/DHD/lib/lin-x86_64/libdrd.a
         pthread
         rt
         dl
         GL
         GLU
         usb-1.0
-        glfw
+        ${CHAI3D_DIR}/extras/GLFW/libglfw.a
         X11
         Xcursor
         Xrandr
         Xinerama
-        haptikfabrikenapi
     )
 
     # Bullet libraries for physics
